@@ -1,0 +1,898 @@
+/* ========================================
+   ОСНОВНЫЕ НАСТРОЙКИ
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #e7e2dc;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+
+    transition: transform 1s ease;
+}
+
+.hero-title {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    color: rgb(26, 1, 1);
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 45px;
+    font-weight: 400;
+
+    letter-spacing: 8px;
+    white-space: nowrap;
+
+    opacity: 0;
+
+    transition: opacity 0.6s ease;
+
+    z-index: 2;
+}
+
+.hero:hover .hero-image {
+    transform: scale(1.05);
+}
+
+.hero:hover .hero-title {
+    opacity: 1;
+}
+
+
+/* ========================================
+   MENU
+======================================== */
+
+.menu {
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 5px 30px 10px 10px;
+
+    background-color: #e0d6cc;
+}
+
+.menu a {
+    color: #3d3530;
+
+    text-decoration: none;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 13px;
+    letter-spacing: 3px;
+
+    transition: opacity 0.3s ease;
+}
+
+.menu a:hover {
+    opacity: 0.5;
+
+    background-color: #3d3530;
+    color: #ffffff;
+
+    letter-spacing: 3px;
+}
+
+
+/* ========================================
+   ГЛАВНЫЙ БЛОК LUMÉ BEAUTY
+======================================== */
+
+.beauty-intro {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 80px auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 70px;
+}
+
+.beauty-intro-text {
+    width: 50%;
+    color: #3d3530;
+}
+
+.beauty-eyebrow {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 14px;
+    letter-spacing: 4px;
+
+    margin: 0 0 25px;
+}
+
+.beauty-intro-text h1 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 52px;
+    font-weight: 400;
+
+    line-height: 1.1;
+
+    margin: 0 0 25px;
+}
+
+.beauty-description {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 18px;
+    line-height: 1.6;
+
+    max-width: 500px;
+
+    margin: 0 0 30px;
+}
+
+.beauty-photo {
+    width: 50%;
+    height: 500px;
+
+    background-image: url("images/beauty.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.beauty-button {
+    display: inline-block;
+
+    padding: 13px 30px;
+
+    background-color: #3d3530;
+    color: white;
+
+    text-decoration: none;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.beauty-button:hover {
+    background-color: #000;
+}
+
+
+/* ========================================
+   БЛОК "ВАШЕ ВРЕМЯ ДЛЯ СЕБЯ"
+======================================== */
+
+.beauty-about {
+    width: 80%;
+    max-width: 850px;
+
+    margin: 120px auto 100px;
+
+    text-align: center;
+
+    color: #3d3530;
+}
+
+.beauty-about-label {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 14px;
+    letter-spacing: 5px;
+
+    margin: 0 0 20px;
+}
+
+.beauty-about h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 45px;
+    font-weight: 400;
+
+    margin: 0 0 25px;
+}
+
+.beauty-about > p:last-child {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 19px;
+    line-height: 1.7;
+
+    max-width: 650px;
+
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   НАША ФИЛОСОФИЯ
+======================================== */
+
+.philosophy {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 80px auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 70px;
+}
+
+.philosophy-image {
+    width: 50%;
+    height: 500px;
+
+    overflow: hidden;
+}
+
+.philosophy-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.philosophy-text {
+    width: 50%;
+
+    color: #3d3530;
+}
+
+.philosophy-text h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 25px;
+}
+
+.philosophy-text h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 42px;
+    font-weight: 400;
+
+    line-height: 1.15;
+
+    margin-bottom: 25px;
+}
+
+.line {
+    width: 500px;
+    height: 1px;
+
+    background-color: #3d3530;
+
+    margin-bottom: 25px;
+}
+
+.philosophy-text p {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 18px;
+    line-height: 1.6;
+
+    margin-bottom: 15px;
+}
+
+.statistics {
+    display: flex;
+
+    gap: 50px;
+
+    margin-top: 35px;
+}
+
+.statistics div {
+    display: flex;
+    flex-direction: column;
+}
+
+.statistics strong {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.statistics span {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 15px;
+
+    margin-top: 3px;
+}
+
+
+/* ========================================
+   СТРАНИЦА УСЛУГ
+======================================== */
+
+.page-title {
+    width: 100%;
+
+    text-align: center;
+
+    padding: 80px 20px 60px;
+
+    color: #3d3530;
+}
+
+.page-title h1 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 50px;
+    font-weight: 400;
+
+    margin-bottom: 15px;
+}
+
+.page-title p {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 19px;
+    line-height: 1.5;
+}
+
+.services {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 0 auto 100px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 40px 30px;
+}
+
+.service-card {
+    background-color: #eee9e3;
+
+    text-align: center;
+
+    color: #3d3530;
+
+    padding-bottom: 25px;
+
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-img {
+    width: 100%;
+    height: 300px;
+
+    background-size: cover;
+    background-position: center;
+
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 28px;
+    font-weight: 400;
+
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 16px;
+    line-height: 1.5;
+
+    padding: 0 20px;
+}
+
+.img1 {
+    background-image: url("images/manicure.jpg");
+}
+
+.img2 {
+    background-image: url("images/pedicure.jpg");
+}
+
+.img3 {
+    background-image: url("images/brows.jpg");
+}
+
+.img4 {
+    background-image: url("images/lashes.jpg");
+}
+
+.img5 {
+    background-image: url("images/makeup.jpg");
+}
+
+.img6 {
+    background-image: url("images/facial.jpg");
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.footer {
+    position: relative;
+
+    width: 100%;
+    height: 80px;
+
+    background-color: #000000;
+}
+
+.footer-bottom {
+    position: absolute;
+
+    bottom: 20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: white;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 11px;
+    font-style: italic;
+
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+}
+
+
+/* ========================================
+   CONTACT PAGE
+======================================== */
+
+.contact-heading {
+    width: 100%;
+
+    text-align: center;
+
+    color: #3d3530;
+
+    margin: 80px auto 50px;
+}
+
+.contact-heading p {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 13px;
+    letter-spacing: 5px;
+
+    margin: 0 0 5px;
+}
+
+.contact-heading h1 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 55px;
+    font-weight: 400;
+
+    margin: 0;
+}
+
+
+/* ========================================
+   CONTACT CONTENT
+======================================== */
+
+.contact-page {
+    width: 90%;
+    max-width: 1000px;
+
+    margin: 0 auto 80px;
+
+    display: flex;
+
+    gap: 100px;
+
+    align-items: flex-start;
+
+    color: #3d3530;
+}
+
+
+/* ========================================
+   CONTACT INFORMATION
+======================================== */
+
+.contact-info {
+    width: 45%;
+
+    padding-top: 20px;
+}
+
+.contact-details {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.contact-item span {
+    display: block;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 3px;
+}
+
+.contact-item p {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 19px;
+
+    margin: 0;
+}
+
+
+/* ========================================
+   CONTACT FORM
+======================================== */
+
+.contact-form {
+    width: 55%;
+
+    background-color: #eee9e3;
+
+    padding: 30px;
+}
+
+.contact-form-label {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    margin: 0 0 15px;
+}
+
+.contact-form h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 42px;
+
+    font-weight: 400;
+
+    margin: 0 0 15px;
+}
+
+.form-description {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 17px;
+
+    line-height: 1.5;
+
+    margin: 0 0 35px;
+}
+
+
+/* ========================================
+   FORM
+======================================== */
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 15px;
+
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    border: none;
+
+    border-bottom: 1px solid #3d3530;
+
+    background-color: transparent;
+
+    padding: 10px 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 17px;
+
+    color: #3d3530;
+
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+
+    min-height: 100px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #8c827b;
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+
+/* ========================================
+   CONTACT BUTTON
+======================================== */
+
+.contact-form button {
+    width: 100%;
+
+    margin-top: 10px;
+
+    padding: 15px 30px;
+
+    border: none;
+
+    background-color: #3d3530;
+
+    color: white;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 16px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #000000;
+}
+
+
+/* ========================================
+   TEXT UNDER CONTACT BLOCKS
+======================================== */
+
+.contact-bottom-text {
+    width: 100%;
+
+    text-align: center;
+
+    color: #3d3530;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 18px;
+
+    margin: -30px auto 100px;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 800px) {
+
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-heading {
+        margin: 60px auto 40px;
+    }
+
+    .contact-heading h1 {
+        font-size: 45px;
+    }
+
+    .contact-page {
+        width: 90%;
+
+        flex-direction: column;
+
+        gap: 60px;
+
+        margin-bottom: 60px;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact-info {
+        padding-top: 0;
+    }
+
+    .contact-form {
+        padding: 40px 30px;
+    }
+
+    .contact-form h2 {
+        font-size: 36px;
+    }
+
+    .contact-bottom-text {
+        margin-bottom: 70px;
+    }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+    .philosophy {
+        flex-direction: column;
+
+        width: 90%;
+
+        gap: 40px;
+    }
+
+    .philosophy-image {
+        width: 100%;
+        height: 400px;
+    }
+
+    .philosophy-text {
+        width: 100%;
+    }
+
+    .philosophy-text h3 {
+        font-size: 34px;
+    }
+
+    .statistics {
+        gap: 25px;
+    }
+
+
+    .beauty-intro {
+        flex-direction: column;
+
+        gap: 40px;
+    }
+
+    .beauty-intro-text {
+        width: 100%;
+    }
+
+    .beauty-photo {
+        width: 100%;
+        height: 400px;
+    }
+
+    .beauty-intro-text h1 {
+        font-size: 38px;
+    }
+
+
+    .beauty-about {
+        width: 90%;
+    }
+
+    .beauty-about h2 {
+        font-size: 35px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .hero-title {
+        font-size: 30px;
+
+        letter-spacing: 5px;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .page-title h1 {
+        font-size: 40px;
+    }
+
+    .service-img {
+        height: 350px;
+    }
+
+    .contact-heading h1 {
+        font-size: 38px;
+    }
+
+    .contact-form {
+        padding: 35px 25px;
+    }
+
+    .contact-form h2 {
+        font-size: 32px;
+    }
+}
